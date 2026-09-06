@@ -37,7 +37,7 @@ The system provides dedicated workflows for **administrators, doctors, reception
 
 The application follows a modern decoupled architecture:
 
-* 🔙 **Laravel 11** provides the RESTful backend API
+* 🔙 **Laravel 13** provides the RESTful backend API
 * ⚛️ **React + Vite** provides the frontend SPA
 * 🗄️ **MySQL** stores application data
 * 🔐 **Laravel Sanctum** handles API authentication
@@ -366,7 +366,7 @@ The project uses a decoupled frontend and backend architecture.
                               │
                               ▼
                  ┌─────────────────────────┐
-                 │     Laravel 11 API      │
+                 │     Laravel 13 API      │
                  │ Controllers / Services  │
                  │ Validation / Middleware │
                  └────────────┬────────────┘
@@ -476,7 +476,7 @@ hospital-management-system/
 | Technology         | Purpose                           |
 | ------------------ | --------------------------------- |
 | 🐘 PHP 8.2+        | Backend runtime                   |
-| 🚀 Laravel 11      | REST API framework                |
+| 🚀 Laravel 13      | REST API framework                |
 | 🔐 Laravel Sanctum | API authentication                |
 | ⚛️ React           | Frontend SPA                      |
 | ⚡ Vite             | Frontend development & build tool |
@@ -494,7 +494,7 @@ hospital-management-system/
 * PHP 8.2 or higher
 * Composer
 * MySQL 8.0 or higher
-* Laravel 11 compatible PHP extensions
+* Laravel 13 compatible PHP extensions
 
 ## Frontend
 
@@ -769,7 +769,7 @@ The application uses Laravel's authentication and authorization features to prot
 
 ### Backend API
 
-The backend is built as a RESTful API using Laravel 11.
+The backend is built as a RESTful API using Laravel 13.
 
 The frontend communicates with the backend through HTTP requests and JSON responses.
 
@@ -823,7 +823,7 @@ The system can be adapted for:
 # 📈 Project Highlights
 
 ```text
-🚀 Laravel 11 REST API
+🚀 Laravel 13 REST API
 ⚛️ React + Vite SPA
 🔐 Laravel Sanctum Authentication
 👥 Role-Based Access Control
