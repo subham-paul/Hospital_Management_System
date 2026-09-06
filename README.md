@@ -1,6 +1,5 @@
 # 🏥 Hospital Management System (HMS)
 
-## Full-stack HMS built with **React.js, Laravel 12, PHP 8.2+, and MySQL**
 <p align="center">
   <img src="https://img.shields.io/badge/Laravel-11-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel">
   <img src="https://img.shields.io/badge/React-18%2B-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
