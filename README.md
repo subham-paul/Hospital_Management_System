@@ -44,8 +44,8 @@ The platform manages the complete hospital workflow, from **patient registration
 # 🎥 Demo Video
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID">
-    <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg" alt="Hospital Management System Demo" width="850">
+  <a href="https://www.youtube.com/watch?v=Kp4F01zAGjs">
+    <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/18274574-e174-4a26-a455-2a7ce2db9bad" alt="Hospital Management System Demo" />
   </a>
 </p>
 
