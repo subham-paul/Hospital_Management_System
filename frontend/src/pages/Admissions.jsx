@@ -59,6 +59,7 @@ export default function Admissions() {
           <option value="discharged">Discharged</option>
         </select>
       </div>
+      <div className="table-wrapper">
       <table>
         <thead>
           <tr><th>Patient</th><th>Doctor</th><th>Ward / Bed</th><th>Admitted</th><th>Discharged</th><th>Status</th>{canEdit && <th></th>}</tr>
@@ -82,6 +83,7 @@ export default function Admissions() {
           {rows.length === 0 && <tr><td colSpan={7} className="muted">No admissions.</td></tr>}
         </tbody>
       </table>
+      </div>
       <Pagination page={page} lastPage={lastPage} setPage={setPage} />
 
       {adding && (

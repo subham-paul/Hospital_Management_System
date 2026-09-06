@@ -8,6 +8,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\MedicalRecordController;
 use App\Http\Controllers\PatientController;
+use App\Http\Controllers\AppointmentPaymentController;
 use App\Http\Controllers\PrescriptionController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -15,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 // Public
 Route::post('/auth/register', [AuthController::class, 'register']);
 Route::post('/auth/login', [AuthController::class, 'login']);
+Route::post('/payments/razorpay/webhook', [AppointmentPaymentController::class, 'webhook']);
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/auth/me', [AuthController::class, 'me']);
@@ -48,7 +50,12 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/appointments', [AppointmentController::class, 'index']);
     Route::get('/appointments/{appointment}', [AppointmentController::class, 'show']);
     Route::post('/appointments', [AppointmentController::class, 'store'])
-        ->middleware('role:admin,receptionist,patient');
+        ->middleware('role:admin,receptionist');
+    Route::middleware('role:patient')->group(function () {
+        Route::post('/appointment-payments/order', [AppointmentPaymentController::class, 'createOrder']);
+        Route::post('/appointment-payments/{appointment}/verify', [AppointmentPaymentController::class, 'verify']);
+        Route::post('/appointment-payments/{appointment}/cancel', [AppointmentPaymentController::class, 'cancel']);
+    });
     Route::put('/appointments/{appointment}', [AppointmentController::class, 'update']);
     Route::delete('/appointments/{appointment}', [AppointmentController::class, 'destroy'])
         ->middleware('role:admin,receptionist');

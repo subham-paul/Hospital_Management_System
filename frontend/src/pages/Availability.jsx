@@ -51,6 +51,7 @@ export default function Availability() {
         <button className="btn" onClick={save} disabled={!doctorId}>Save</button>
       </div>
       <div className="card">
+        <div className="table-wrapper">
         <table>
           <thead><tr><th>Day</th><th>Available</th><th>From</th><th>To</th></tr></thead>
           <tbody>
@@ -68,8 +69,7 @@ export default function Availability() {
               </tr>
             ))}
           </tbody>
-        </table>
-        {message && <p style={{ color: 'var(--success)', marginTop: 10 }}>{message}</p>}
+        </table>        </div>        {message && <p style={{ color: 'var(--success)', marginTop: 10 }}>{message}</p>}
         {error && <p className="error">{error}</p>}
       </div>
     </>

@@ -51,6 +51,7 @@ export default function Prescriptions() {
         <h2>Prescriptions</h2>
         {canEdit && <button className="btn" onClick={() => { setError(''); setAdding(true); }}>+ New Prescription</button>}
       </div>
+      <div className="table-wrapper">
       <table>
         <thead>
           <tr><th>Date</th><th>Patient</th><th>Doctor</th><th>Medicines</th><th></th></tr>
@@ -68,6 +69,7 @@ export default function Prescriptions() {
           {rows.length === 0 && <tr><td colSpan={5} className="muted">No prescriptions.</td></tr>}
         </tbody>
       </table>
+      </div>
       <Pagination page={page} lastPage={lastPage} setPage={setPage} />
 
       {viewing && (

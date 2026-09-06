@@ -62,6 +62,7 @@ export default function Users() {
           {ROLES.map((r) => <option key={r} value={r}>{r}</option>)}
         </select>
       </div>
+      <div className="table-wrapper">
       <table>
         <thead>
           <tr><th>Name</th><th>Email</th><th>Role</th><th>Active</th><th></th></tr>
@@ -83,6 +84,7 @@ export default function Users() {
           {rows.length === 0 && <tr><td colSpan={5} className="muted">No users.</td></tr>}
         </tbody>
       </table>
+      </div>
       <Pagination page={page} lastPage={lastPage} setPage={setPage} />
 
       {editing && (

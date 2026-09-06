@@ -12,11 +12,21 @@ class DoctorController extends Controller
 {
     public function index(Request $request)
     {
-        return Doctor::with(['user:id,name,email,phone,is_active', 'availabilities'])
-            ->when($request->query('search'), fn ($q, $s) => $q->where('specialization', 'like', "%{$s}%")
-                ->orWhereHas('user', fn ($q) => $q->where('name', 'like', "%{$s}%")))
+        $perPage = min(max($request->integer('per_page', 15), 1), 100);
+
+        return Doctor::select('id', 'user_id', 'specialization', 'qualification', 'license_no', 'consultation_fee', 'bio', 'created_at', 'updated_at')
+            ->with([
+                'user:id,name,email,phone,is_active',
+                'availabilities:id,doctor_id,day_of_week,start_time,end_time,is_available'
+            ])
+            ->when($request->query('search'), function ($query, $search) {
+                $query->where(function ($query) use ($search) {
+                    $query->where('specialization', 'like', "%{$search}%")
+                        ->orWhereHas('user', fn ($userQuery) => $userQuery->where('name', 'like', "%{$search}%"));
+                });
+            })
             ->latest()
-            ->paginate($request->integer('per_page', 15));
+            ->paginate($perPage);
     }
 
     /** Creates the user account (role=doctor) and doctor profile together. */
@@ -29,8 +39,8 @@ class DoctorController extends Controller
             'phone' => ['nullable', 'string', 'max:30'],
             'specialization' => ['required', 'string', 'max:255'],
             'qualification' => ['nullable', 'string', 'max:255'],
-            'license_no' => ['nullable', 'string', 'max:255'],
-            'consultation_fee' => ['nullable', 'numeric', 'min:0'],
+            'license_no' => ['required', 'string', 'max:255'],
+            'consultation_fee' => ['required', 'numeric', 'min:1'],
             'bio' => ['nullable', 'string'],
         ]);
 
@@ -47,8 +57,8 @@ class DoctorController extends Controller
                 'user_id' => $user->id,
                 'specialization' => $data['specialization'],
                 'qualification' => $data['qualification'] ?? null,
-                'license_no' => $data['license_no'] ?? null,
-                'consultation_fee' => $data['consultation_fee'] ?? 0,
+                'license_no' => $data['license_no'],
+                'consultation_fee' => $data['consultation_fee'],
                 'bio' => $data['bio'] ?? null,
             ]);
         });
@@ -58,7 +68,10 @@ class DoctorController extends Controller
 
     public function show(Doctor $doctor)
     {
-        return $doctor->load(['user:id,name,email,phone,is_active', 'availabilities']);
+        return $doctor->load([
+            'user:id,name,email,phone,is_active',
+            'availabilities:id,doctor_id,day_of_week,start_time,end_time,is_available'
+        ]);
     }
 
     public function update(Request $request, Doctor $doctor)
@@ -69,8 +82,8 @@ class DoctorController extends Controller
             'phone' => ['nullable', 'string', 'max:30'],
             'specialization' => ['sometimes', 'string', 'max:255'],
             'qualification' => ['nullable', 'string', 'max:255'],
-            'license_no' => ['nullable', 'string', 'max:255'],
-            'consultation_fee' => ['nullable', 'numeric', 'min:0'],
+            'license_no' => ['sometimes', 'required', 'string', 'max:255'],
+            'consultation_fee' => ['sometimes', 'required', 'numeric', 'min:1'],
             'bio' => ['nullable', 'string'],
         ]);
 

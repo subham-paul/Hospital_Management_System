@@ -56,6 +56,7 @@ export default function Patients() {
         <input placeholder="Search name / code / phone…" value={search}
           onChange={(e) => { setSearch(e.target.value); setPage(1); }} />
       </div>
+      <div className="table-wrapper">
       <table>
         <thead>
           <tr><th>Code</th><th>Name</th><th>Gender</th><th>Blood</th><th>Phone</th>{canEdit && <th></th>}</tr>
@@ -76,6 +77,7 @@ export default function Patients() {
           {rows.length === 0 && <tr><td colSpan={6} className="muted">No patients found.</td></tr>}
         </tbody>
       </table>
+      </div>
       <Pagination page={page} lastPage={lastPage} setPage={setPage} />
 
       {editing && (

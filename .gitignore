@@ -6,6 +6,8 @@ backend/.env
 backend/.env.*
 frontend/.env
 frontend/.env.*
+.rzp-key*.csv
+rzp-key*.csv
 .pdf
 # Dependencies
 node_modules/
@@ -37,3 +39,4 @@ coverage/
 .idea/
 .DS_Store
 Thumbs.db
+misc/

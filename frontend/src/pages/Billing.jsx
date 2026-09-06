@@ -76,6 +76,7 @@ export default function Billing() {
           ))}
         </select>
       </div>
+      <div className="table-wrapper">
       <table>
         <thead>
           <tr><th>Bill No.</th><th>Patient</th><th>Total</th><th>Paid</th><th>Status</th>{canEdit && <th></th>}</tr>
@@ -102,6 +103,7 @@ export default function Billing() {
           {rows.length === 0 && <tr><td colSpan={6} className="muted">No bills.</td></tr>}
         </tbody>
       </table>
+      </div>
       <Pagination page={page} lastPage={lastPage} setPage={setPage} />
 
       {adding && (
