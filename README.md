@@ -73,7 +73,7 @@ The platform manages the complete hospital workflow, from **patient registration
 * 💰 Billing and payment tracking
 * 📊 Role-based dashboard statistics
 
-> **Tip:** Replace `YOUR_VIDEO_ID` with your actual YouTube video ID.
+
 
 ---
 
