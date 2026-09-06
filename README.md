@@ -14,6 +14,12 @@
 </p>
 
 <p align="center">
+  <a href="#-features">
+    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=22&duration=3200&pause=900&color=0F766E&center=true&vCenter=true&width=760&lines=Simplifying+care+through+connected+hospital+workflows;Secure+appointments%2C+records%2C+billing%2C+and+payments;Built+for+administrators%2C+doctors%2C+staff%2C+and+patients" alt="Simplifying care through connected hospital workflows" />
+  </a>
+</p>
+
+<p align="center">
   <a href="#-demo-video">🎥 Demo</a> •
   <a href="#-features">✨ Features</a> •
   <a href="#-system-architecture">🏗️ Architecture</a> •
