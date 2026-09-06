@@ -706,7 +706,7 @@ The application uses Laravel's authentication and authorization features to prot
 ## 🔐 Login Page
 
 <p align="center">
-  <img src="docs/screenshots/login.png" width="90%" alt="Hospital Management System Login">
+  <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/28db5c55-b222-46be-a783-cdf7a96f24ba"  alt="Hospital Management System Login"/>
 </p>
 
 ---
@@ -714,7 +714,7 @@ The application uses Laravel's authentication and authorization features to prot
 ## 📊 Admin Dashboard
 
 <p align="center">
-  <img src="docs/screenshots/admin-dashboard.png" width="90%" alt="Admin Dashboard">
+  <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/58ece1d4-cb3e-47e1-988e-1e669e7a8296" alt="Admin Dashboard"/>
 </p>
 
 ---
@@ -722,7 +722,7 @@ The application uses Laravel's authentication and authorization features to prot
 ## 👨‍⚕️ Doctor Management
 
 <p align="center">
-  <img src="docs/screenshots/doctors.png" width="90%" alt="Doctor Management">
+  <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/79f1ae6b-a0d7-4212-aadb-450a777e00dc"  alt="Doctor Management"/>
 </p>
 
 ---
@@ -730,7 +730,7 @@ The application uses Laravel's authentication and authorization features to prot
 ## 🧑‍🤝‍🧑 Patient Management
 
 <p align="center">
-  <img src="docs/screenshots/patients.png" width="90%" alt="Patient Management">
+  <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/7e525674-f630-4ad1-898a-80c661a4bfcb" alt="Patient Management"/>
 </p>
 
 ---
@@ -738,7 +738,7 @@ The application uses Laravel's authentication and authorization features to prot
 ## 📅 Appointment Management
 
 <p align="center">
-  <img src="docs/screenshots/appointments.png" width="90%" alt="Appointment Management">
+  <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/f0d12ba9-6909-4365-8fcd-d046b1006ccd" alt="Appointment Management"/>
 </p>
 
 ---
@@ -746,7 +746,7 @@ The application uses Laravel's authentication and authorization features to prot
 ## 🏥 Admission Management
 
 <p align="center">
-  <img src="docs/screenshots/admissions.png" width="90%" alt="Admission Management">
+  <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/072ba41f-2854-49db-becc-bf0ae26150d4" alt="Admission Management"/>
 </p>
 
 ---
@@ -754,10 +754,9 @@ The application uses Laravel's authentication and authorization features to prot
 ## 💰 Billing Management
 
 <p align="center">
-  <img src="docs/screenshots/billing.png" width="90%" alt="Billing Management">
+  <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/d16da90e-0738-47e0-8291-1c637ed9b809" alt="Billing Management"/>
 </p>
 
-> Replace the screenshot paths with your actual screenshots.
 
 ---
 
