@@ -1,8 +1,6 @@
 # 🏥 Hospital Management System (HMS)
 
-<<<<<<< HEAD
-Full-stack HMS built with **React.js, Laravel 12, PHP 8.2+, and MySQL**.
-=======
+Full-stack HMS built with **React.js, Laravel 12, PHP 8.2+, and MySQL**
 <p align="center">
   <img src="https://img.shields.io/badge/Laravel-11-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel">
   <img src="https://img.shields.io/badge/React-18%2B-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
@@ -10,7 +8,6 @@ Full-stack HMS built with **React.js, Laravel 12, PHP 8.2+, and MySQL**.
   <img src="https://img.shields.io/badge/MySQL-8.0%2B-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
   <img src="https://img.shields.io/badge/Sanctum-Authentication-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Sanctum">
 </p>
->>>>>>> 19ecba38d6624887d06a3679ffe01667373ea64d
 
 <p align="center">
   <strong>A modern full-stack Hospital Management System built with Laravel REST API and React.</strong>
@@ -600,7 +597,6 @@ npm install
 
 Create the frontend environment file:
 
-<<<<<<< HEAD
 ## Razorpay appointment payments
 
 Patient bookings use Razorpay Standard Checkout. Add test or live credentials to `backend/.env` (never commit them):
@@ -653,10 +649,6 @@ POST /api/bills/{id}/pay | /api/bills/{id}/cancel
 POST /api/appointment-payments/order
 POST /api/appointment-payments/{id}/verify | /api/appointment-payments/{id}/cancel
 POST /api/payments/razorpay/webhook
-=======
-```bash
-cp .env.example .env
->>>>>>> 19ecba38d6624887d06a3679ffe01667373ea64d
 ```
 
 Configure the API URL:
